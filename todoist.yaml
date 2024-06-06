@@ -65,6 +65,7 @@ paths:
                 $ref: '#/components/schemas/ErrorModel'
     post:
       summary: Create a new project
+      x-speakeasy-entity-operation: Project#create
       description: |
         Creates a new project and returns it as a JSON object.
 
@@ -140,6 +141,7 @@ paths:
   /projects/{projectId}:
     get:
       summary: Get a project
+      x-speakeasy-entity-operation: Project#read
       description: |
         Returns a JSON object containing a project object related to the given ID.
 
@@ -190,6 +192,7 @@ paths:
                 $ref: '#/components/schemas/ErrorModel'
     post:
       summary: Update a project
+      x-speakeasy-entity-operation: Project#update
       description: |
         Returns a JSON object containing the updated project object.
 
@@ -263,6 +266,7 @@ paths:
                 $ref: '#/components/schemas/ErrorModel'
     delete: 
       summary: Delete a project
+      x-speakeasy-entity-operation: Project#delete
       description: |
         Deletes a project.
 
@@ -1528,6 +1532,7 @@ components:
   schemas:
     Project:
       type: object
+      x-speakeasy-entity: Project
       properties:
         id:
           type: string
