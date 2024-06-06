@@ -1,12 +1,12 @@
 lockVersion: 2.0.0
 id: d471bfcd-fb5c-4458-81b8-72b88ee3ad84
 management:
-  docChecksum: a535fa57e3564d9c0b1d4a8a64e2569a
+  docChecksum: 1e2fcc48a3bb675340c7d901f4b50a9e
   docVersion: 1.1.0
   speakeasyVersion: 1.300.0
   generationVersion: 2.338.14
-  releaseVersion: 0.0.1
-  configChecksum: 49654f64ea0f3c956992776f7cfa7e31
+  releaseVersion: 0.0.2
+  configChecksum: c809a5bee94762f37cdc96bd151dbfde
 features:
   terraform:
     additionalDependencies: 0.1.0
@@ -126,4 +126,11 @@ generatedFiles:
   - USAGE.md
   - internal/provider/provider.go
   - examples/provider/provider.tf
+  - examples/resources/todoist_project/import.sh
+  - internal/provider/project_resource.go
+  - internal/provider/project_resource_sdk.go
+  - examples/resources/todoist_project/resource.tf
+  - internal/provider/project_data_source.go
+  - internal/provider/project_data_source_sdk.go
+  - examples/data-sources/todoist_project/data-source.tf
   - .gitattributes

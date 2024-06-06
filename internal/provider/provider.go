@@ -88,11 +88,15 @@ func (p *TodoistProvider) Configure(ctx context.Context, req provider.ConfigureR
 }
 
 func (p *TodoistProvider) Resources(ctx context.Context) []func() resource.Resource {
-	return []func() resource.Resource{}
+	return []func() resource.Resource{
+		NewProjectResource,
+	}
 }
 
 func (p *TodoistProvider) DataSources(ctx context.Context) []func() datasource.DataSource {
-	return []func() datasource.DataSource{}
+	return []func() datasource.DataSource{
+		NewProjectDataSource,
+	}
 }
 
 func New(version string) func() provider.Provider {

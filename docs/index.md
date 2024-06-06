@@ -17,7 +17,7 @@ terraform {
   required_providers {
     todoist = {
       source  = "speakeasy/todoist"
-      version = "0.0.1"
+      version = "0.0.2"
     }
   }
 }

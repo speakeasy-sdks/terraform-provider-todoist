@@ -158,6 +158,7 @@ paths:
       parameters:
         - in: path
           name: projectId
+          x-speakeasy-match: id
           schema:
             type: string
           required: true
@@ -208,6 +209,7 @@ paths:
       parameters:
         - in: path
           name: projectId
+          x-speakeasy-match: id
           schema:
             type: string
           required: true
@@ -283,6 +285,7 @@ paths:
       parameters:
         - in: path
           name: projectId
+          x-speakeasy-match: id
           schema:
             type: string
           required: true
