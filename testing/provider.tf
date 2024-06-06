@@ -17,4 +17,8 @@ resource "todoist_project" "my_project" {
   name        = "Terraform"
 }
 
-resource "" "" {}
+resource "todoist_task" "my_task" {
+  content     = "does it change?"
+  priority        = 3
+  project_id      = todoist_project.my_project.id
+}
