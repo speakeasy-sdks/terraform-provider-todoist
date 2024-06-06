@@ -1,0 +1,11 @@
+workflowVersion: 1.0.0
+sources:
+    todoist-openapi:
+        inputs:
+            - location: todoist.yaml
+        registry:
+            location: registry.speakeasyapi.dev/speakeasy-self/speakeasy-self/todoist-openapi
+targets:
+    my-first-target:
+        target: terraform
+        source: todoist-openapi
