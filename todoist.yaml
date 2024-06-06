@@ -657,6 +657,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorModel'
     post:
+      x-speakeasy-entity-operation: Task#create
       summary: Create a new task
       description: |
         Creates a new task and returns it as a JSON object.
@@ -674,6 +675,7 @@ paths:
           application/json:
             schema:
               type: object
+              x-speakeasy-entity: Task
               properties:
                 content:
                   type: string
@@ -718,6 +720,7 @@ paths:
                   description: The responsible user ID (only applies to shared tasks).
                 duration:
                   type: integer
+                  x-speakeasy-name-override: duration_amount
                   description: A positive (greater than zero) integer for the amount of duration_unit the task will take. If specified, you must define a duration_unit.
                 duration_unit:
                   type: string
@@ -770,6 +773,7 @@ paths:
   /tasks/{taskId}:
     get:
       summary: Get an active task
+      x-speakeasy-entity-operation: Task#read
       description: |
         Returns a single active (non-completed) task by ID as a JSON object.
 
@@ -785,8 +789,9 @@ paths:
       parameters:
         - in: path
           name: taskId
+          x-speakeasy-match: id
           schema:
-            type: integer
+            type: string
           required: true
           description: The ID of the task to retrieve.
       responses:
@@ -829,6 +834,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ErrorModel'
     post:
+      x-speakeasy-entity-operation: Task#update
       summary: Update a task
       description: |
         Updates a specified task and returns it as a JSON object.
@@ -844,6 +850,7 @@ paths:
         - in: path
           name: taskId
           required: true
+          x-speakeasy-match: id
           description: The ID of the task to update.
           schema:
             type: string
@@ -885,6 +892,7 @@ paths:
                   description: The responsible user ID or null to unset (for shared tasks).
                 duration:
                   type: integer
+                  x-speakeasy-name-override: duration_amount
                   description: A positive integer for the task duration, or null to unset. If specified, you must define a duration_unit.
                 duration_unit:
                   type: string
@@ -935,6 +943,7 @@ paths:
 
     delete:
       summary: Delete a task
+      x-speakeasy-entity-operation: Task#delete
       description: |
         Deletes a task. 
 
@@ -950,8 +959,9 @@ paths:
       parameters:
         - in: path
           name: taskId
+          x-speakeasy-match: id
           schema:
-            type: integer
+            type: string
           required: true
           description: The ID of the task to delete.
       responses:
@@ -1607,6 +1617,7 @@ components:
 
     Task:
       type: object
+      x-speakeasy-entity: Task
       properties:
         id:
           type: string

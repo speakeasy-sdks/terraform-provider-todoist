@@ -1,3 +1,3 @@
 data "todoist_project" "my_project" {
-  id = "b04b633d-b24a-4ea9-8b90-8f82dd41188c"
+  id = "b633db24-aea9-44b9-88f8-2dd41188c3a2"
 }

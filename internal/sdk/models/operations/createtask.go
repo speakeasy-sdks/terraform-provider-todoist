@@ -35,7 +35,7 @@ type CreateTaskRequestBody struct {
 	// The responsible user ID (only applies to shared tasks).
 	AssigneeID *string `json:"assignee_id,omitempty"`
 	// A positive (greater than zero) integer for the amount of duration_unit the task will take. If specified, you must define a duration_unit.
-	Duration *int64 `json:"duration,omitempty"`
+	DurationAmount *int64 `json:"duration,omitempty"`
 	// The unit of time that the duration field above represents. Must be either minute or day. If specified, duration must be defined as well.
 	DurationUnit *string `json:"duration_unit,omitempty"`
 }
@@ -131,11 +131,11 @@ func (o *CreateTaskRequestBody) GetAssigneeID() *string {
 	return o.AssigneeID
 }
 
-func (o *CreateTaskRequestBody) GetDuration() *int64 {
+func (o *CreateTaskRequestBody) GetDurationAmount() *int64 {
 	if o == nil {
 		return nil
 	}
-	return o.Duration
+	return o.DurationAmount
 }
 
 func (o *CreateTaskRequestBody) GetDurationUnit() *string {

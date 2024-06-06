@@ -2,16 +2,16 @@ speakeasyVersion: 1.300.0
 sources:
     todoist-openapi:
         sourceNamespace: todoist-openapi
-        sourceRevisionDigest: sha256:811c3ff7d7c02ced6481f35148e0a51b7ec66da79526d28919f0e2d63bc38a6d
-        sourceBlobDigest: sha256:20bd037ecc419b264338547a1e5e46100127a0a19c174fafe0b4bdb55fb87e8e
+        sourceRevisionDigest: sha256:b8f0eb768e9b183c53a02a497dd2456182905301babc467d26e659877331fcce
+        sourceBlobDigest: sha256:bcc93a053a2089b90c7dd2fa4eda8c9c254652430ccce1b939f828756b0c90e3
         tags:
             - latest
 targets:
     my-first-target:
         source: todoist-openapi
         sourceNamespace: todoist-openapi
-        sourceRevisionDigest: sha256:811c3ff7d7c02ced6481f35148e0a51b7ec66da79526d28919f0e2d63bc38a6d
-        sourceBlobDigest: sha256:20bd037ecc419b264338547a1e5e46100127a0a19c174fafe0b4bdb55fb87e8e
+        sourceRevisionDigest: sha256:b8f0eb768e9b183c53a02a497dd2456182905301babc467d26e659877331fcce
+        sourceBlobDigest: sha256:bcc93a053a2089b90c7dd2fa4eda8c9c254652430ccce1b939f828756b0c90e3
         outLocation: /Users/thomasrooney/Code/speakeasy-api/openapi-generation/zSDKs/terraform-provider-todoist
 workflow:
     workflowVersion: 1.0.0

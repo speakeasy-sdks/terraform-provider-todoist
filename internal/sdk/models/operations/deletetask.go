@@ -9,12 +9,12 @@ import (
 
 type DeleteTaskRequest struct {
 	// The ID of the task to delete.
-	TaskID int64 `pathParam:"style=simple,explode=false,name=taskId"`
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
-func (o *DeleteTaskRequest) GetTaskID() int64 {
+func (o *DeleteTaskRequest) GetTaskID() string {
 	if o == nil {
-		return 0
+		return ""
 	}
 	return o.TaskID
 }
