@@ -1,18 +1,19 @@
 lockVersion: 2.0.0
 id: d471bfcd-fb5c-4458-81b8-72b88ee3ad84
 management:
-  docChecksum: a535fa57e3564d9c0b1d4a8a64e2569a
+  docChecksum: 42e2a609f4ce14d51cf87a8029287ce2
   docVersion: 1.1.0
   speakeasyVersion: 1.300.0
   generationVersion: 2.338.14
-  releaseVersion: 0.0.1
-  configChecksum: 49654f64ea0f3c956992776f7cfa7e31
+  releaseVersion: 0.1.0
+  configChecksum: 49ad0ad19b4383815578f7c8bd510e2b
 features:
   terraform:
     additionalDependencies: 0.1.0
     core: 3.21.2
     globalSecurity: 2.81.6
     globalServerURLs: 2.82.1
+    nameOverrides: 2.81.2
     nullables: 0.0.0
 generatedFiles:
   - internal/sdk/projects.go
@@ -123,7 +124,25 @@ generatedFiles:
   - main.go
   - terraform-registry-manifest.json
   - tools/tools.go
+  - internal/provider/types/due.go
+  - internal/provider/types/task_due.go
+  - internal/provider/types/duration.go
+  - internal/provider/types/task_duration.go
   - USAGE.md
   - internal/provider/provider.go
   - examples/provider/provider.tf
+  - examples/resources/todoist_project/import.sh
+  - internal/provider/project_resource.go
+  - internal/provider/project_resource_sdk.go
+  - examples/resources/todoist_project/resource.tf
+  - examples/resources/todoist_task/import.sh
+  - internal/provider/task_resource.go
+  - internal/provider/task_resource_sdk.go
+  - examples/resources/todoist_task/resource.tf
+  - internal/provider/project_data_source.go
+  - internal/provider/project_data_source_sdk.go
+  - examples/data-sources/todoist_project/data-source.tf
+  - internal/provider/task_data_source.go
+  - internal/provider/task_data_source_sdk.go
+  - examples/data-sources/todoist_task/data-source.tf
   - .gitattributes

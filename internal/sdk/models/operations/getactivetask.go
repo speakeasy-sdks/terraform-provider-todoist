@@ -9,12 +9,12 @@ import (
 
 type GetActiveTaskRequest struct {
 	// The ID of the task to retrieve.
-	TaskID int64 `pathParam:"style=simple,explode=false,name=taskId"`
+	TaskID string `pathParam:"style=simple,explode=false,name=taskId"`
 }
 
-func (o *GetActiveTaskRequest) GetTaskID() int64 {
+func (o *GetActiveTaskRequest) GetTaskID() string {
 	if o == nil {
-		return 0
+		return ""
 	}
 	return o.TaskID
 }

@@ -27,7 +27,7 @@ type UpdateTaskRequestBody struct {
 	// The responsible user ID or null to unset (for shared tasks).
 	AssigneeID *string `json:"assignee_id,omitempty"`
 	// A positive integer for the task duration, or null to unset. If specified, you must define a duration_unit.
-	Duration *int64 `json:"duration,omitempty"`
+	DurationAmount *int64 `json:"duration,omitempty"`
 	// The unit of time for the duration. Must be either 'minute' or 'day'.
 	DurationUnit *string `json:"duration_unit,omitempty"`
 }
@@ -95,11 +95,11 @@ func (o *UpdateTaskRequestBody) GetAssigneeID() *string {
 	return o.AssigneeID
 }
 
-func (o *UpdateTaskRequestBody) GetDuration() *int64 {
+func (o *UpdateTaskRequestBody) GetDurationAmount() *int64 {
 	if o == nil {
 		return nil
 	}
-	return o.Duration
+	return o.DurationAmount
 }
 
 func (o *UpdateTaskRequestBody) GetDurationUnit() *string {
